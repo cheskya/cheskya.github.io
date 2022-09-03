@@ -1,0 +1,214 @@
+/* all pages of the site share basically the same css features ^^ */
+
+
+
+/* fonts */
+
+@font-face { /* font for arcade (title) text */
+    font-family: "Arcade";
+    src: url(../fonts/arcade.ttf) format("truetype");
+}
+
+@font-face { /* main font for the site */
+    font-family: "Open Sans";
+    src: url(../fonts/opensans.ttf) format("truetype");
+}
+
+
+
+
+
+/* root variables */
+
+:root {
+    --global-font-size: 15px;
+    --global-font-family: "Open Sans";
+}
+
+
+
+
+
+/* reset styles */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: unset;
+    margin: 0;
+    font-size: var(--global-font-size)
+}
+
+
+
+
+
+/* main css */
+
+body {
+    margin: 0;
+    font-size: var(--global-font-size);
+    font-family: var(--global-font-family);
+}
+
+    /* header */
+
+    header {
+        background: url(/graphics/header.png);
+        background-size: contain;
+        background-position: center top;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 1265px; /* hardcoded size for computers, no choice :( */
+        position: relative;
+    }
+    
+        /* header contents */
+    
+        .arcade-screen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 50%;
+            box-sizing: content-box;
+            height: 370px;
+            width: 480px;
+            position: absolute;
+            top: 65%;
+            left: 49%;
+            transform: translate(-49%,-65%);
+            font-family: "Arcade";
+            padding: 20px;
+        }
+    
+        .title { /* name of the site */
+            font-size: 25px;
+            color: white;
+            text-align: center;
+            width: 100%;
+        }
+
+        /* nav, part of header */
+
+        .centering-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            justify-items: center;
+            gap: 5px;
+            background: orange;
+            height: fit-content;
+            width: 90%;
+            margin-top: 100px;
+            border-radius: 50px;
+            border: 3px solid white;
+            z-index: 2;
+        }
+        
+        nav div {
+            width: 220px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            border-radius: 0px;
+        }
+        
+        nav div:hover {
+            background: red;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+
+
+    /* main body (contains all the essential elements) */
+
+    .main-body {
+        /* the rest of the site besides the header and footer, contains the essentials */
+        background: url(/graphics/background.jpg);
+        background-size: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    
+    /* content container, controls spacing */
+    .content-container {
+        /*
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 40px;
+        width: 100%;
+        height: fit-content;
+        margin: 20px;
+        padding: 10px;
+    }
+
+        /* divs containing the text */
+        .info-container {
+            border: 5px solid black;
+            background: rgb(236, 221, 0);
+            box-shadow: 0 0 5px 10px rgba(0, 0, 0, 0.4);
+            font-style: italic;
+            padding: 15px;
+        }
+
+        .info-container h1 {
+            font-weight: 900;
+        }
+
+        .info-container img {
+            border: 2px solid black;
+        }
+        
+        .info-container li {
+            margin: 5px 0;
+        }
+
+        .info-container iframe {
+            margin: 20px 0;
+            border: 2px solid black;
+        } 
+
+        .image-container {
+            position: relative;
+        }
+    
+
+
+/* extra, unused */
+.extra-button {
+    display: none;
+    background: green;
+    height: 50px;
+    width: 50px;
+    top: 15px;
+    left: 15px;
+    position: sticky;
+}
+
+
+
+@media
+    only screen and (max-width: 800px) {
+    
+    /* fix later */
+    
+    /*
+    .site-header {
+        height: 300px;
+        margin-top: 20px;
+    }
+    */
+}

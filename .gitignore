@@ -2,3 +2,9 @@
 launch.py
 desktop.ini
 .vs
+
+# the template of the site
+template.html
+
+# the test folder
+/test
