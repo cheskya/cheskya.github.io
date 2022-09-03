@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>first test</title>
+		
+		<style>
+			@font-face { /* font for arcade (title) text */
+				font-family: "Arcade";
+				src: url(/fonts/Arcade.ttf) format("truetype");
+			}
+		
+		
+		
+			body {
+				margin: 0;
+				font-size: 20px;
+			}
+		
+			.site-header {
+				background: url(/graphics/arcade.jpg);
+				background-size: cover;
+				background-position: 50% 0%;
+				background-repeat: no-repeat;
+				width: 100%;
+				height: 100vh; /* will be different on other devices, media query or otherwise */
+				position: relative;
+			}
+			
+			.site-body {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background: url(/graphics/background.jpg);
+				width: 100%;
+				height: 100%;
+			}
+			
+			.blog-container {
+				background: #fff4dc;
+				width: 60%;
+				height: 100%;
+				padding: 0 20px;
+			}
+			
+			.extra-button {
+				display: none;
+				background: green;
+				height: 50px;
+				width: 50px;
+				top: 15px;
+				left: 15px;
+				position: sticky;
+			}
+			
+			.centering {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			
+			.nav-bar {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				justify-items: center;
+				gap: 5px;
+				background: orange;
+				height: fit-content;
+				width: 90%;
+				margin-top: 15px;
+				border-radius: 50px;
+				border: 3px solid white;
+				z-index: 2;
+			}
+			
+			.nav-bar div {
+				width: 220px;
+				height: 60px;
+				line-height: 60px;
+				text-align: center;
+				border-radius: 0px;
+			}
+			
+			.nav-bar div:hover {
+				background: yellow;
+				transition: all 0.2s;
+				cursor: pointer;
+			}
+			
+			.title {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				opacity: 50%;
+				box-sizing: content-box;
+				height: 370px;
+				width: 480px;
+				position: absolute;
+				top: 65%;
+				left: 49%;
+				transform: translate(-49%,-65%);
+				font-family: "Arcade";
+				padding: 20px;
+			}
+			
+			.actual-title {
+				font-size: 25px;
+				color: white;
+				text-align: center;
+				width: 100%;
+			}
+			
+			@media
+				only screen and (max-width: 800px) {
+				
+				/* fix later */
+				
+				/*
+				.site-header {
+					height: 300px;
+					margin-top: 20px;
+				}
+				*/
+			}
+			
+		</style>
+	</head>
+	
+	<body>
+		<!-- the header -->
+		<div class="site-header">
+			<!-- the credits -->
+			<div class="extra-button">
+			extra
+			</div>
+			<!-- the nav -->
+			<div class="centering">
+				<nav class="nav-bar">
+				<a><div>Overview</div></a>
+				<a><div>History</div></a>
+				<a><div>The "Who"?</div></a>
+				<a><div>Infil's Dictionary!</div></a>
+				</nav>
+			</div>
+			<!-- the title -->
+			<div class="title">
+				<!-- arrow combos -->
+				<div>
+					
+				</div>
+				<!-- streetfighters -->
+				<div>
+				</div>
+				<!-- actual title -->
+				<div class="actual-title">
+					A look at the Rich Vocabulary of the Fighting Game Community (FGC)
+				</div>
+			</div>
+		</div>
+		
+		<!-- the body --->
+		<div class="site-body">
+			<div class="blog-container">
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non fringilla lectus, 
+					sit amet consequat sem. Sed hendrerit sodales nisi, a interdum magna finibus quis. 
+					In lobortis, est at auctor aliquam, tellus libero commodo odio, ac blandit elit leo 
+					sit amet mauris. Maecenas vestibulum nulla sed augue luctus fermentum. Suspendisse 
+					ex risus, mattis sit amet egestas sed, tristique quis elit. In hac habitasse platea 
+					dictumst. Duis placerat luctus enim non cursus. Maecenas sit amet lectus maximus, 
+					varius diam eget, vehicula nulla. Sed varius mauris vitae lorem viverra sodales. 
+					Aliquam nec commodo diam. Phasellus sed sollicitudin nibh. 
+				</p>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non fringilla lectus, 
+					sit amet consequat sem. Sed hendrerit sodales nisi, a interdum magna finibus quis. 
+					In lobortis, est at auctor aliquam, tellus libero commodo odio, ac blandit elit leo 
+					sit amet mauris. Maecenas vestibulum nulla sed augue luctus fermentum. Suspendisse 
+					ex risus, mattis sit amet egestas sed, tristique quis elit. In hac habitasse platea 
+					dictumst. Duis placerat luctus enim non cursus. Maecenas sit amet lectus maximus, 
+					varius diam eget, vehicula nulla. Sed varius mauris vitae lorem viverra sodales. 
+					Aliquam nec commodo diam. Phasellus sed sollicitudin nibh. 
+				</p>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non fringilla lectus, 
+					sit amet consequat sem. Sed hendrerit sodales nisi, a interdum magna finibus quis. 
+					In lobortis, est at auctor aliquam, tellus libero commodo odio, ac blandit elit leo 
+					sit amet mauris. Maecenas vestibulum nulla sed augue luctus fermentum. Suspendisse 
+					ex risus, mattis sit amet egestas sed, tristique quis elit. In hac habitasse platea 
+					dictumst. Duis placerat luctus enim non cursus. Maecenas sit amet lectus maximus, 
+					varius diam eget, vehicula nulla. Sed varius mauris vitae lorem viverra sodales. 
+					Aliquam nec commodo diam. Phasellus sed sollicitudin nibh. 
+				</p>
+			</div>
+		</div>
+	</body>
+</html>
