@@ -2,6 +2,7 @@
 launch.py
 desktop.ini
 .vs
+.txt
 
 # the template of the site
 template.html

@@ -14,6 +14,11 @@
     src: url(../fonts/opensans.ttf) format("truetype");
 }
 
+@font-face { /* main font for the site */
+    font-family: "Street Fighter";
+    src: url(../fonts/streetfighter.ttf) format("truetype");
+}
+
 
 
 
@@ -37,8 +42,14 @@ h1, h2, h3, h4, h5, h6 {
     font-size: var(--global-font-size)
 }
 
+p {
+    margin: 5px;
+}
 
-
+a {
+    color: unset;
+    text-decoration: none;
+}
 
 
 /* main css */
@@ -47,13 +58,14 @@ body {
     margin: 0;
     font-size: var(--global-font-size);
     font-family: var(--global-font-family);
+    scroll-behavior: smooth;
 }
 
     /* header */
 
     header {
         background: url(/graphics/header.png);
-        background-size: contain;
+        background-size: cover;
         background-position: center top;
         background-repeat: no-repeat;
         width: 100%;
@@ -63,32 +75,24 @@ body {
     
         /* header contents */
     
-        .arcade-screen {
+        .logo-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            opacity: 50%;
             box-sizing: content-box;
-            height: 370px;
-            width: 480px;
+            height: 400px;
+            width: 700px;
             position: absolute;
-            top: 65%;
-            left: 49%;
-            transform: translate(-49%,-65%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
             font-family: "Arcade";
             padding: 20px;
-        }
-    
-        .title { /* name of the site */
-            font-size: 25px;
-            color: white;
-            text-align: center;
-            width: 100%;
         }
 
         /* nav, part of header */
 
-        .centering-nav {
+        .nav-container {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -99,13 +103,15 @@ body {
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             justify-items: center;
             gap: 5px;
-            background: orange;
+            background: #ffa500;
             height: fit-content;
             width: 90%;
             margin-top: 100px;
             border-radius: 50px;
             border: 3px solid white;
             z-index: 2;
+            font-size: 16px;
+            font-weight: bold;
         }
         
         nav div {
@@ -117,7 +123,7 @@ body {
         }
         
         nav div:hover {
-            background: red;
+            background: #ff7300;
             transition: all 0.2s;
             cursor: pointer;
         }
@@ -148,7 +154,7 @@ body {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        gap: 40px;
+        gap: 10px;
         width: 100%;
         height: fit-content;
         margin: 20px;
@@ -158,14 +164,10 @@ body {
         /* divs containing the text */
         .info-container {
             border: 5px solid black;
-            background: rgb(236, 221, 0);
-            box-shadow: 0 0 5px 10px rgba(0, 0, 0, 0.4);
-            font-style: italic;
+            background: #ecdd00;
+            box-shadow: 0 0 5px 8px rgba(0, 0, 0, 0.4);
             padding: 15px;
-        }
-
-        .info-container h1 {
-            font-weight: 900;
+            width: 50%;
         }
 
         .info-container img {
@@ -181,9 +183,49 @@ body {
             border: 2px solid black;
         } 
 
+        .info-container p {
+            margin: 10px;
+        } 
+
+        h1 {
+            font-family: "Street Fighter";
+            font-size: 45px;
+            letter-spacing: 1px;
+            font-style: normal;
+            color: #ff0000;
+            -webkit-text-stroke: #6e0000 0.5px;
+            text-shadow: 2px 2px black;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
         .image-container {
             position: relative;
         }
+
+        .two-columns {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            grid-auto-flow: row;
+        }
+
+    .button {
+        border: 5px solid black;
+        border-radius: 15px;
+        background: #ff0000;
+        color: white;
+        font-weight: bold;
+        box-shadow: 0 0 5px 8px rgba(0, 0, 0, 0.4);
+        padding: 15px;
+        width: fit-content;
+    }
+
+    .button:hover {
+        background: #cd0000;
+        transition: all 0.2s;
+        cursor: pointer;
+    }
     
 
 
@@ -199,16 +241,17 @@ body {
 }
 
 
+/* weak attempt at making the site suitable for mobile devices */
 
 @media
     only screen and (max-width: 800px) {
     
-    /* fix later */
-    
-    /*
-    .site-header {
-        height: 300px;
-        margin-top: 20px;
+    .info-container {
+        width: 80%;
     }
-    */
+
+    h1 {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
 }
