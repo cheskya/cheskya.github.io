@@ -170,6 +170,10 @@ body {
             text-decoration: none;
         }
 
+        .intro-container {
+            width: fit-content;
+        }
+
 
 
     /* main body (contains all the essential elements) */
@@ -229,6 +233,7 @@ body {
 
         .info-container p {
             margin: 10px;
+            text-align: justify;
         }
         
         .image-container {
@@ -277,6 +282,9 @@ body {
             width: 100%;
         }
 
+    .info-container-no-margin {
+        margin-bottom: 0;
+    }
 
     .qr-container {
         width: 300px;
@@ -323,8 +331,12 @@ body {
 
 @media
     only screen and (max-width: 800px) {
+
+    nav {
+        margin-top: 10px;
+    }
     
-    .info-container {
+    .info-container, .intro-container {
         width: 80%;
     }
 
@@ -336,5 +348,9 @@ body {
     h1 {
         font-size: 30px;
         margin-bottom: 10px;
+    }
+    
+    .multiple-columns div {
+        width: 80%;
     }
 }
