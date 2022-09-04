@@ -10,8 +10,8 @@
 }
 
 @font-face { /* main font for the site */
-    font-family: "Open Sans";
-    src: url(../fonts/opensans.ttf) format("truetype");
+    font-family: "Mitr Light";
+    src: url(../fonts/mitr-light.ttf) format("truetype");
 }
 
 @font-face { /* main font for the site */
@@ -27,19 +27,46 @@
 
 :root {
     --global-font-size: 15px;
-    --global-font-family: "Open Sans";
+    --global-font-family: "Mitr Light";
 }
 
 
 
 
 
-/* reset styles */
+/* reset styles and apply own */
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: unset;
     margin: 0;
     font-size: var(--global-font-size)
+}
+
+h1, h3 {
+    font-family: "Street Fighter";
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-style: normal;
+    color: #ff0000;
+    -webkit-text-stroke: #6e0000 0.5px;
+    text-shadow: 2px 2px black;
+    text-align: center;
+}
+
+h2 {
+    font-family: "Street Fighter";
+    font-size: 45px;
+    letter-spacing: 1px;
+    font-style: normal;
+    color: #ff0000;
+    -webkit-text-stroke: #6e0000 0.5px;
+    text-shadow: 2px 2px black;
+    margin: 15px 0;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    margin: 0 10px;
 }
 
 p {
@@ -50,6 +77,10 @@ a {
     color: unset;
     text-decoration: none;
 }
+
+
+
+
 
 
 /* main css */
@@ -96,6 +127,7 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
         }
 
         nav {
@@ -143,7 +175,7 @@ body {
         height: 100%;
     }
     
-    /* content container, controls spacing */
+    /* contains everything essential, controls spacing */
     .content-container {
         /*
         display: grid;
@@ -161,13 +193,15 @@ body {
         padding: 10px;
     }
 
-        /* divs containing the text */
+        /* divs containing the content */
         .info-container {
+            --container-length: 50%;
             border: 5px solid black;
             background: #ecdd00;
             box-shadow: 0 0 5px 8px rgba(0, 0, 0, 0.4);
             padding: 15px;
-            width: 50%;
+            width: var(--container-length);
+            margin-bottom: 50px;
         }
 
         .info-container img {
@@ -185,18 +219,6 @@ body {
 
         .info-container p {
             margin: 10px;
-        } 
-
-        h1 {
-            font-family: "Street Fighter";
-            font-size: 45px;
-            letter-spacing: 1px;
-            font-style: normal;
-            color: #ff0000;
-            -webkit-text-stroke: #6e0000 0.5px;
-            text-shadow: 2px 2px black;
-            margin-bottom: 15px;
-            text-align: center;
         }
         
         .image-container {
@@ -205,10 +227,56 @@ body {
 
         .two-columns {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
             grid-auto-flow: row;
+            justify-items: center;
         }
+
+        .two-columns > div {
+            width: 90%;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            margin-bottom: 40px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* div containing a single image, used inside two-columns */
+        .image-container-individual {
+            background: var(--displayed-image);
+            aspect-ratio: 1 / 1; /* really not good for old browsers (2021+) but well... */
+        }
+
+        /* div containing multiple images, used inside info-container */
+        .image-container-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            width: 100%;
+        }
+
+
+    .qr-container {
+        width: 300px;
+        height: fit-content;
+    }
+
+    .qr-container img {
+        width: 90%;
+        height: auto;
+    }
 
     .button {
         border: 5px solid black;
@@ -248,6 +316,11 @@ body {
     
     .info-container {
         width: 80%;
+    }
+
+    .qr-container {
+        width: 200px;
+        height: auto;
     }
 
     h1 {
