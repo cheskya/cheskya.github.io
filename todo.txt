@@ -1,0 +1,18 @@
+stuff to fix on the website:
+    mobile-related issues:
+    - [X] fix the header
+    - [X] fix the nav (dropdown?)
+    - [X] fix the intro-containers
+    - [X] fix the sources qr (make it width: 80%)
+    - [X] fix the left padding of lists on mobile
+    - [X] fix the photo on the "history" page
+    - [X] fix the size of the h2 on mobile (too big and loud and scary)
+    - [ ] fix the social media logos
+    - [X] fix the size of the grid on the dictionary page for mobile
+
+    design-related issues:
+    - [X] find a way to make the text look more readable on the history page
+    - [ ] try out the alternate layout on the overview page
+    - [X] i think the h1 have a lingering margin...
+    - [ ] favicon? cursor?
+    - [ ] scanlines? (may be too distracting)

@@ -6,8 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 		
 		<title>The Rich Vocabulary of the FGC</title>
+
+		<script src="/dropdown.js"></script>
 	</head>
 	
 	<body>
@@ -18,18 +21,23 @@
 			<!-- the nav -->
 			<div class="nav-container">
 				<nav>
-					<a href="/index.html"><div>Overview</div></a>
-					<a href="/history.html"><div>History</div></a>
-					<a href="/who.html"><div>The "Who"?</div></a>
-					<a href="/dictionary.html"><div>Infil's Dictionary!</div></a>
+					<button onclick="toggleDropdown()" id="dropdown-button" class="dropdown-button">
+						<i class="fa-solid fa-bars"></i>
+					</button>
+					<div id="dropdown-content" class="dropdown-content">
+						<a href="/index.html"><div>Overview</div></a>
+						<a href="/history.html"><div>History</div></a>
+						<a href="/who.html"><div>The "Who"?</div></a>
+						<a href="/dictionary.html"><div>Infil's Dictionary!</div></a>
+					</div>
 				</nav>
-				<div class="info-container intro-container" style="margin-top: 25px; text-align: center; font-weight: bold; font-size: 18px; width: fit-content;">
+				<div class="info-container intro-container" style="margin-top: 25px; text-align: center; font-size: 18px;">
 					<h1>An Overview of Fighting Games and their Community</h1>
 				</div>
 			</div>
 			<!-- the logo -->
 			<div class="logo-container">
-				<img src="/graphics/logo.png" style="image-rendering: crisp-edges; width: 800px; height: auto;">
+				<img src="/graphics/logo.png">
 			</div>
 
 		</header>
@@ -45,7 +53,7 @@
 
 				<div class="info-container">
 					<h2>What are fighting games?</h2>
-					<ul style="padding-left: 20px;">
+					<ul style="padding-right: 25px;">
 						<li>
 							Fighting games are a genre of video games where two players battle against each other through a specific type of interface.
 						</li>
