@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: var(--global-font-size)
 }
 
-h1, h3 {
+h1, h3, h4 {
     font-family: "Street Fighter";
     font-size: 30px;
     letter-spacing: 1px;
@@ -65,7 +65,7 @@ h2 {
     text-align: center;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     margin: 0 10px;
 }
 
@@ -74,8 +74,13 @@ p {
 }
 
 a {
-    color: unset;
-    text-decoration: none;
+    color: #ff0000;
+    text-decoration: underline;
+}
+
+a:hover {
+    font-weight: bold;
+    transition: all 0.2s;
 }
 
 
@@ -160,6 +165,11 @@ body {
             cursor: pointer;
         }
 
+        nav a {
+            color: unset;
+            text-decoration: none;
+        }
+
 
 
     /* main body (contains all the essential elements) */
@@ -225,7 +235,7 @@ body {
             position: relative;
         }
 
-        .two-columns {
+        .multiple-columns {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
@@ -233,7 +243,7 @@ body {
             justify-items: center;
         }
 
-        .two-columns > div {
+        .multiple-columns > div {
             width: 90%;
         }
 
@@ -252,7 +262,7 @@ body {
             height: 100%;
         }
 
-        /* div containing a single image, used inside two-columns */
+        /* div containing a single image, used inside multiple-columns */
         .image-container-individual {
             background: var(--displayed-image);
             aspect-ratio: 1 / 1; /* really not good for old browsers (2021+) but well... */
