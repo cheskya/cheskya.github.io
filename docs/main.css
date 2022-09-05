@@ -15,8 +15,8 @@
 }
 
 @font-face { /* main font for the site */
-    font-family: "Street Fighter";
-    src: url(../fonts/streetfighter.ttf) format("truetype");
+    font-family: "Pink Blue";
+    src: url(../fonts/pinkblue.ttf) format("truetype");
 }
 
 
@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h3, h4 {
-    font-family: "Street Fighter";
+    font-family: "Pink Blue";
     font-size: 30px;
     letter-spacing: 1px;
     font-style: normal;
@@ -54,7 +54,7 @@ h1, h3, h4 {
 }
 
 h2 {
-    font-family: "Street Fighter";
+    font-family: "Pink Blue";
     font-size: 45px;
     letter-spacing: 1px;
     font-style: normal;

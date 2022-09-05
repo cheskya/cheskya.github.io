@@ -7,7 +7,3 @@ desktop.ini
 # template and test html
 template.html
 test.html
-
-# the test folder
-/test
-*.txt
