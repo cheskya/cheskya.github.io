@@ -1,7 +1,8 @@
 # just some personal files
-launch.py
+*.py
 desktop.ini
 .vs
+.vscode
 *.txt
 
 # template and test html

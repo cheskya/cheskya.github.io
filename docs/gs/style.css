@@ -1,0 +1,260 @@
+/* --- website fonts --- */
+
+/* title (h1) */
+@font-face {
+    font-family: "Noto Sans Italic";
+    src: url(fonts/NotoSans-Italic.ttf) format("truetype"); 
+}
+
+/* h2 and h3 */
+@font-face {
+    font-family: "Ubuntu Bold";
+    src: url(fonts/Ubuntu-Bold.ttf) format("truetype");
+}
+
+/* body text */
+@font-face {
+    font-family: "Noto Sans Regular";
+    src: url(fonts/NotoSans-Regular.ttf) format("truetype");
+}
+
+/* font awesome */
+@font-face {
+    font-family: "FA-Solid";
+    src: url(fonts/FA-Solid-900.ttf) format("truetype");
+}
+
+
+
+
+
+/* --- root variables --- */
+
+:root {
+    /* gaps between boxes */
+    --gap: 15px;
+    /* font */
+    --global-font-family: "Noto Sans Regular", "Calibri";
+    --global-font-size: 15px;
+    --global-font-color: #e3d8e5;
+    /* other variables */
+    --box-bg-color: #1b191c;
+}
+
+
+
+
+
+/* --- reset elements --- */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: unset;
+    font-size: unset;
+    margin: 0;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+
+
+
+/* --- elements --- */
+
+html {
+    background-image: url("graphics/site-bg.png");
+    background-size: cover;
+    background-attachment: fixed;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--global-font-family);
+    font-size: var(--global-font-size);
+    color: var(--global-font-color);
+}
+
+.site {
+    display: table;
+    table-layout: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.centering {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 800px;
+    margin: 10px auto 20px auto;
+}
+
+/* header */
+.main__header-row {
+    box-sizing: border-box;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.main__header-row__title {
+    padding-top: 60px;
+    flex-grow: 1;
+    font-size: 30px;
+    font-family: "Noto Sans Italic";
+    color: white;
+    max-width: 500px;
+}
+
+.main__header-row__graphic {
+    min-width: 200px;
+    height: 100%;
+    flex-grow: 0;
+    margin: 0;
+}
+
+.main__header-row__graphic img {
+    height: 100%;
+    width: auto;
+}
+
+/* content */
+.main__content-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: fit-content;
+    gap: var(--gap);
+}
+
+.main__content-row__extras {
+    /* nav, nav2, qr*/
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    min-width: 200px;
+    height: fit-content;
+    flex-grow: 0;
+}
+
+.main__content-row__extras > div, nav {
+    box-sizing: border-box;
+    background: var(--box-bg-color);
+    padding: 15px;
+    width: 100%;
+}
+
+.main__content-row__extras > .main__content-row__extras__nav, .main__content-row__extras__toc {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.main__content-row__extras > .main__content-row__extras__nav a:hover, .main__content-row__extras__toc a:hover {
+    font-weight: bold;
+}
+
+.main__content-row__extras > .main__content-row__extras__nav a::before, .main__content-row__extras__toc a::before {
+    font-family: "FA-Solid";
+    content: "\f105";
+    margin-right: 0.5em;
+    color:#4d9dff;
+}
+
+.main__content-row__extras button {
+    height: 30px;
+    font-size: 15px;
+}
+
+.main__content-row__extras h4 {
+    color:#ff4dd3;
+    font-family: "Ubuntu Bold";
+    font-size: 18px;
+}
+
+.main__content-row__extras__qr img {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.main__content-row__extras__qr img:hover {
+    transform: scale(0.98);
+    opacity: 80%;
+    transition: 0.2s all;
+}
+
+.main__content-row__info {
+    /* this is the main body of the site */
+    background: orange;
+    padding: 25px;
+    padding-bottom: 10px;
+    height: fit-content;
+    flex-grow: 1;
+    background: var(--box-bg-color);
+}
+
+.main__content-row__info > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+}
+
+.to-top {
+    width: fit-content;
+    margin: 20px auto 5px auto;
+}
+
+.to-top > a {
+    display: inline-block;
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+.to-top > a:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 45px;
+    font-family: "Ubuntu Bold";
+    color: #ff4dd3;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 25px;
+    font-family: "Ubuntu Bold";
+    color: #4d9dff;
+}
+
+br {
+    margin: 10px 0;
+}
+
+p {
+    text-align: justify;
+}
+
+/* footer */
+
+footer {
+    margin-top: var(--gap);
+    background: var(--box-bg-color);
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
