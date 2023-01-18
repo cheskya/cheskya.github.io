@@ -6,17 +6,17 @@
 
 @font-face { /* font for arcade (title) text */
     font-family: "Arcade";
-    src: url(../fonts/arcade.ttf) format("truetype");
+    src: url(fonts/arcade.ttf) format("truetype");
 }
 
 @font-face { /* main font for the site */
     font-family: "Mitr Light";
-    src: url(../fonts/mitr-light.ttf) format("truetype");
+    src: url(fonts/mitr-light.ttf) format("truetype");
 }
 
 @font-face { /* main font for the site */
     font-family: "Pink Blue";
-    src: url(../fonts/pinkblue.ttf) format("truetype");
+    src: url(fonts/pinkblue.ttf) format("truetype");
 }
 
 
@@ -115,7 +115,7 @@ body {
     /* header */
 
     header {
-        background: url(/graphics/header.png);
+        background: url(graphics/header.png);
         background-size: cover;
         background-position: center top;
         background-repeat: no-repeat;
@@ -221,7 +221,7 @@ body {
 
     .main-body {
         /* the rest of the site besides the header and footer, contains the essentials */
-        background: url(/graphics/background.jpg);
+        background: url(graphics/background.jpg);
         background-size: 80%;
         display: flex;
         justify-content: center;
@@ -372,7 +372,7 @@ body {
     only screen and (max-width: 540px) {
 
     header {
-        background: url("/graphics/background.jpg");
+        background: url("graphics/background.jpg");
         background-size: contain;
         height: fit-content;
     }
