@@ -1,0 +1,246 @@
+/* fonts */
+
+@font-face {
+  font-family: "Nunito";
+  src: url(assets/fonts/Nunito-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Nunito Bold";
+  src: url(assets/fonts/Nunito-Bold.ttf);
+}
+
+/* root and html elements */
+
+:root {
+  --font-color-primary: #ffffff;
+  --font-color-secondary: #000000;
+  --link-color--primary: #0954AD;
+  --link-color-secondary: #650990;
+}
+
+html,
+body {
+  font-family: "Nunito", "Calibri";
+  margin: 0;
+  padding: 0;
+  color: var(--font-color-primary);
+  font-size: 22px;
+}
+
+a {
+  text-decoration: none;
+  color: #c2d7ff;
+}
+
+h1 {
+  font-family: "Nunito Bold", "Calibri";
+  text-transform: uppercase;
+  width: fit-content;
+  font-size: 2.5rem;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+/* main */
+
+.main {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url(assets/images/bg.png);
+  background-color: #3d0070;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* landing */
+
+.landing {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100vh;
+}
+
+/* TODO: add breakpoint for mobile (remove clouds when screen gets too narrow) */
+
+.landing__image {
+  margin-top: 5.5rem;
+  margin-right: 2rem;
+  height: 100vh;
+  z-index: 2;
+}
+
+.landing__text {
+  font-size: 2rem;
+  width: 15ch;
+}
+
+.landing__emoticon {
+  font-family: "Nunito", "Calibri";
+  font-size: 2rem;
+  margin-left: 2rem;
+}
+
+.landing__name {
+  font-family: "Nunito Bold", "Calibri";
+  text-transform: uppercase;
+  display: block;
+  font-size: 4rem;
+  line-height: 4rem;
+}
+
+/* about */
+
+.about {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+}
+
+.about__image {
+  transform: scaleX(-1);
+  margin-top: 5.5rem;
+  height: 110vh;
+  z-index: 2;
+}
+
+.about__text {
+  font-size: 1rem;
+  margin-left: 5rem;
+  width: 50ch;
+}
+
+/* projects */
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  padding: 2rem;
+  padding-top: 8rem;
+  gap: 1rem;
+}
+
+.projects__heading {
+  font-family: "Nunito Bold", "Calibri";
+  text-transform: uppercase;
+  width: fit-content;
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+
+.projects__container {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.projects__box {
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--font-color-secondary);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 50px;
+  height: 10rem;
+  width: 100%;
+  box-shadow: 0 5px 15px #170D2C;
+}
+
+.projects__box img {
+  height: 100%;
+  width: auto;
+  justify-self: flex-start;
+}
+
+.projects__box > div {
+  justify-self: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.projects__box p {
+  margin: 0;
+}
+
+.projects__box a {
+  display: block;
+  color: var(--link-color--primary);
+}
+
+.projects__box a:visited {
+  color: var(--link-color-secondary);
+}
+
+.projects__box a > img {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+.projects__link {
+  display: block;
+  background: #ffffff;
+  color: var(--font-color-secondary);
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+}
+
+.projects__link:hover {
+  cursor: pointer;
+}
+
+/* contact */
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  padding: 5rem 2rem 5rem 2rem;
+  gap: 1rem;
+}
+
+.contact__heading {
+  margin: 0;
+}
+
+.contact div > a {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.contact a img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1rem;
+}
